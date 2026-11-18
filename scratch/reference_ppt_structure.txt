@@ -1,0 +1,265 @@
+Total Slides: 16
+
+==================== SLIDE 1 ====================
+[1] CAPSTONE PROJECT
+[2] Fourier TransformAnalysis of MachineVibration for FaultDetection
+[3] Applied Mathematics +Machine Learning
+[4] 2026
+[5] 01
+[8] SIMATS ENGINEERING | Saveetha Institute of Medical and Technical Sciences | Chennai-602105.
+[9] UBA0618– Applied Mathematics
+[10] Supervisor: | Dr . Dhanalakshmi A, | Professor, | SIMATS Engineering | 
+[11] Presented by:  | Pramith Maredukonda   192372174 | C mohammed Asif    192525092  | 
+
+==================== SLIDE 2 ====================
+[1] 01 • CONTEXT
+[2] Introduction
+[3] Why vibration monitoring is useful for rotating machines
+[4] •  Rotating machines produce vibration signals during operation. | •  Changes in vibration can indicate abnormal machine conditions. | •  An accelerometer converts mechanical vibration into a measurable signal. | •  FFT changes the signal from the time domain to the frequency domain. | •  Machine learning can classify the extracted vibration patterns.
+[7] From machine motion to diagnosis
+[9] Pump
+[10] Rotating machine
+[13] Sensor
+[14] Accelerometer
+[17] FFT
+[18] Frequency
+[19] The project combines mathematical signal analysis with data-driven classification.
+[20] 02
+
+==================== SLIDE 3 ====================
+[1] 02 • OBJECTIVES
+[2] Objectives
+[3] Clear goals for the proposed condition-monitoring system
+[6] 01  Capture / represent vibration signals
+[7] Work with accelerometer-based vibration data from the pump system.
+[10] 02  Apply Fourier Transform
+[11] Identify important frequency components hidden in the time-domain signal.
+[14] 03  Extract useful features
+[15] Convert vibration behaviour into numerical inputs for machine learning.
+[18] 04  Classify machine condition
+[19] Use Random Forest to distinguish healthy, imbalance and bearing-fault states.
+[22] 05  Support real-time monitoring
+[23] Provide a simple software interface for analysis and prediction.
+[24] 03
+
+==================== SLIDE 4 ====================
+[1] 03 • MATHEMATICAL MODEL
+[2] Mathematical Model
+[3] Discrete Fourier Transform, FFT and vibration features
+[6] Discrete Fourier Transform
+[7] Xₖ = Σₙ₌₀ⁿ⁻¹ xₙ e⁻ⁱ²πkn/N
+[8] xₙ = sampled vibration signal     •     Xₖ = frequency-domain representation
+[11] RMS
+[12] √(1/N · Σxᵢ²)
+[15] Peak amplitude
+[16] max |xᵢ|
+[19] Crest factor
+[20] Peak / RMS
+[23] Kurtosis
+[24] Fourth-moment measure
+[27] Spectral centroid
+[28] Σ fᵢ|X(fᵢ)| / Σ|X(fᵢ)|
+[29] FFT is the efficient computational method used to obtain the discrete frequency spectrum.
+[30] 04
+
+==================== SLIDE 5 ====================
+[1] 04 • WHY FFT
+[2] Why Fourier Transform?
+[3] The same vibration can be difficult to interpret in time, but clearer in frequency
+[6] Time domain
+[7] Shows vibration amplitude versus time.Useful for overall signal shape, but fault-specific frequency components may be difficult to separate.
+[101] Frequency domain
+[102] Shows how vibration energy is distributed across frequencies.Characteristic peaks become easier to observe.
+[103] Frequency spectrum
+[109] Low frequency → High frequency
+[112] Diagnostic value
+[113] • 1X rotational peak → imbalance• High-frequency impacts → bearing fault• Frequency features → ML inputs
+[114] FFT turns a complex waveform into a frequency map that is easier to quantify.
+[115] 05
+
+==================== SLIDE 6 ====================
+[1] 05 • LITERATURE SURVEY
+[2] Literature Survey
+[3] Existing research supports vibration analysis, FFT-based features and ML classification
+[6] Gupta & Pradhan (2017)
+[7] Reviewed bearing-fault detection using vibration measurements across time, frequency and time-frequency domains.
+[8] Supports vibration as a practical diagnostic signal.
+[11] Feng, Liang & Chu (2013)
+[12] Reviewed time-frequency analysis methods for machinery fault diagnosis and highlighted the importance of non-stationary signal analysis.
+[13] Shows the broader signal-processing landscape.
+[16] Vibration Image Representations Review (2022)
+[17] Discussed FFT spectrum representations and other frequency/time-frequency approaches for rotating-machine diagnosis.
+[18] Supports FFT as a useful frequency-domain representation.
+[21] Recent ML/DL Survey (2025)
+[22] Reviewed ML and deep-learning methods, feature extraction, datasets and practical challenges in vibration-based bearing diagnosis.
+[23] Shows the shift toward intelligent condition monitoring.
+[24] Key gap addressed here: combine interpretable FFT features with a lightweight ML classifier in a simple full-stack prototype.
+[25] 06
+
+==================== SLIDE 7 ====================
+[1] 06 • PROBLEM
+[2] Real-Time Problem Statement
+[3] Detect abnormal pump conditions before they lead to severe downtime
+[6] Industrial challenge
+[7] Traditional inspection can depend on periodic checks and expert interpretation.A fault may develop between inspections.A continuous vibration signal contains information that can be processed automatically.
+[8] Operational scenario
+[10] Normaloperation
+[13] Vibrationchanges
+[16] Faultsignature
+[19] MLprediction
+[20] Goal: transform raw vibration into an understandable condition label with minimal manual analysis.
+[21] 07
+
+==================== SLIDE 8 ====================
+[1] 07 • WORKFLOW
+[2] System Workflow
+[3] End-to-end pipeline from vibration acquisition to fault prediction
+[5] 1
+[6] Vibrationsignal
+[9] 2
+[10] Pre-processsignal
+[13] 3
+[14] FFTspectrum
+[17] 4
+[18] Featureextraction
+[21] 5
+[22] Scalefeatures
+[25] 6
+[26] RandomForest
+[29] 7
+[30] Faultresult
+[33] Input
+[34] Accelerometer / simulated vibration samples
+[37] Mathematical stage
+[38] FFT + statistical / spectral features
+[41] AI stage
+[42] StandardScaler + Random Forest
+[45] Output
+[46] Healthy  |  Rotor Imbalance  |  Bearing Fault
+[47] 08
+
+==================== SLIDE 9 ====================
+[1] 08 • TECHNOLOGY
+[2] Technologies & Techniques
+[3] Software stack and analytical methods used in the prototype
+[6] Python 3.12
+[7] Core data and ML environment
+[10] NumPy + SciPy
+[11] Numerical processing and FFT
+[14] Pandas
+[15] Dataset handling
+[18] Scikit-learn
+[19] Scaling, Random Forest and evaluation
+[22] FastAPI + Uvicorn
+[23] Backend API for prediction
+[26] React + Vite
+[27] Interactive frontend
+[30] Recharts
+[31] Signal / result visualisation
+[34] Joblib
+[35] Model persistence
+[36] Techniques: FFT • feature extraction • standardisation • supervised classification • train/test evaluation
+[37] 09
+
+==================== SLIDE 10 ====================
+[1] 09 • MODULE 1
+[2] Module 1 — Signal Processing & FFT
+[3] Convert vibration data into meaningful mathematical features
+[6] A. Time-domain signal
+[98] The sampled signal contains vibration caused by normal rotation, noise and possible faults.
+[101] B. FFT → features
+[102] Frequency spectrum
+[108] Low frequency → High frequency
+[110] Extract numerical indicators
+[113] RMS
+[116] Peak
+[119] Crest
+[122] Kurtosis
+[125] Centroid
+[126] 10
+
+==================== SLIDE 11 ====================
+[1] 10 • MODULE 2
+[2] Module 2 — Machine Learning Classification
+[3] Learn the relationship between extracted features and machine condition
+[5] Featurevector
+[8] StandardScaler
+[11] RandomForest
+[14] Prediction
+[15] Training: 80% of samples  →  Testing: 20% of samples  →  Stratified evaluation
+[18] Healthy
+[19] Normal baseline vibration
+[22] Rotor Imbalance
+[23] Strong 1X rotational component
+[26] Bearing Fault
+[27] High-frequency impacts + higher impulsiveness
+[28] 11
+
+==================== SLIDE 12 ====================
+[1] 11 • RESULTS
+[2] Results & Evaluation
+[3] Current prototype result on the synthesized dataset
+[6] Validation accuracy
+[7] 100%
+[8] Synthetic validation set
+[11] Dataset
+[12] 450 samples
+[13] Synthesized physical signal data
+[16] Classifier
+[17] Random Forest
+[18] 100 estimators • random_state=42
+[19] Evaluation interpretation
+[20] •  The current synthetic test shows perfect separation of the three designed classes. | •  This result should not be treated as field-equipment accuracy.
+[23] What to evaluate next
+[26] Real sensor data
+[29] Different speeds / loads
+[32] Noise robustness
+[35] Confusion matrix
+[36] 12
+
+==================== SLIDE 13 ====================
+[1] 12 • ADVANTAGES
+[2] Advantages
+[3] Why the proposed approach is suitable for a student capstone prototype
+[6] Interpretable
+[7] FFT peaks and statistical features can be explained mathematically.
+[10] Lightweight
+[11] Random Forest is practical for a small feature-based dataset.
+[14] Fast analysis
+[15] FFT efficiently converts sampled signals into frequency information.
+[18] Modular
+[19] Signal processing and ML stages can be improved independently.
+[22] User friendly
+[23] React frontend + FastAPI backend separates interface from prediction logic.
+[26] Expandable
+[27] Future work can include real sensor data, more faults and time-frequency methods.
+[28] 13
+
+==================== SLIDE 14 ====================
+[1] 13 • CONCLUSION
+[2] Conclusion
+[3] A practical pipeline was designed to combine Fourier analysis with machine learning for vibration-based fault detection.
+[5] Vibration
+[8] FFT
+[11] Features
+[14] Random Forest
+[17] Fault class
+[18] •  The mathematical stage makes fault-related frequency behaviour measurable. | •  The ML stage converts extracted features into an automatic condition label. | •  The current prototype demonstrates the concept using 450 synthesized samples; real industrial data is the next validation step.
+[19] 14
+
+==================== SLIDE 15 ====================
+[0] Output:
+
+==================== SLIDE 16 ====================
+[1] 14 • REFERENCES
+[2] References
+[3] Key sources used for the project and literature survey
+[4] 1. Gupta, P., & Pradhan, M. K. (2017). Fault detection analysis in rolling element bearing: A review. Materials Today: Proceedings, 4(2), 2085–2094. DOI: 10.1016/j.matpr.2017.02.054
+[5] 2. Feng, Z., Liang, M., & Chu, F. (2013). Recent advances in time-frequency analysis methods for machinery fault diagnosis: A review with application examples. Mechanical Systems and Signal Processing, 38(1), 165–205. DOI: 10.1016/j.ymssp.2013.01.017
+[6] 3. Vibration Image Representations for Fault Diagnosis of Rotating Machines: A Review (2022). Machines, 10(12), 1113.
+[7] 4. Vibration-based condition monitoring and fault diagnosis of rotating machinery: Fundamentals, signal processing techniques, standards, and emerging trends (2026). Results in Engineering. DOI: 10.1016/j.rineng.2026.112372
+[8] 5. A survey of machine learning and deep learning methods for vibration-based Bearing fault diagnosis (2025). Neurocomputing. DOI: 10.1016/j.neucom.2025.131628
+[9] 6. Project source: synthesized 450-sample vibration dataset and implementation notes supplied with this capstone.
+[10] Note: Current project claims and numerical results are based on the supplied project specification / README.
+[11] 15
+

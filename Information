@@ -1,0 +1,66 @@
+Good. RainRisk — Rainfall Probability & Flood Risk Analysis is a suitable capstone project for your Probability and Statistics subject. It has a real-world use case, a mandatory web-based user interface, and enough statistical concepts to demonstrate your subject knowledge without requiring an overly complex implementation.
+
+We can proceed with this as your selected project.
+
+## Finalized project overview
+
+[Floods the new urban India normal: How to reverse the trend? - India Today](https://images.openai.com/static-rsc-4/GEtsJ-OZpx-zviQKxrBODijXkbmN85bUevrkLeEFFgCKRhjonqTaJOBnrdgFf50GozZxkOlnRdYMEkY1_VR4CZdptVHq342IQnFZCK3l2GfwXD_Pl2h6wGp0aH-TPcTu4N0uDpbY1y2kXp4wPE8dSQ_PkBshE0FP5Aw12vUqGC8?purpose=inline)
+
+[indiatoday.in](https://www.indiatoday.in/india-today-insight/story/floods-the-new-urban-india-normal-how-to-reverse-the-trend-2739199-2025-06-11)
+
+## RainRisk — Rainfall Probability & Flood Risk Analysis
+
+Selected Project
+
+Web Application
+
+Medium Difficulty
+
+RainRisk analyzes historical rainfall records to estimate rainfall probabilities, identify unusual rainfall patterns, and provide a statistical indication of potential flood risk.
+
+## Core features
+
+1\. Rainfall Dataset Upload
+
+Upload a CSV file containing historical rainfall readings, with validation for missing values, invalid dates, and incorrect rainfall measurements.
+
+2\. Statistical Analysis
+
+Calculate mean, median, variance, standard deviation, monthly averages, and seasonal rainfall summaries.
+
+3\. Rainfall Probability Calculator
+
+Let users select a rainfall threshold and calculate the historical probability of rainfall exceeding it.
+
+4\. Unusual Rainfall Detection
+
+Use percentiles and historical variation to flag unusually high rainfall observations.
+
+5\. Interactive Dashboard
+
+Display rainfall trends, monthly comparisons, yearly variations, probability results, and statistical summaries using charts.
+
+## Probability and Statistics concepts covered
+
+| Concept                   | Application in RainRisk                                            |
+| ------------------------- | ------------------------------------------------------------------ |
+| Descriptive statistics    | Mean, median, variance and standard deviation                      |
+| Empirical probability     | Frequency of rainfall exceeding a threshold                        |
+| Conditional probability   | Probability of heavy rainfall given a selected season or month     |
+| Percentiles               | Identify unusually high rainfall                                   |
+| Probability distributions | Explore rainfall patterns using suitable statistical distributions |
+| Confidence intervals      | Estimate uncertainty in historical rainfall probabilities          |
+
+For example, the application could calculate:
+
+\\[ P(R > 50)=\frac{\text{Days with rainfall above 50 mm}}{\text{Total observed days}} \\]
+
+Here, \\(R\\) represents daily rainfall in millimeters. The result is an estimate based on historical observations, not a guarantee of future rainfall.
+
+Important scope decision: RainRisk should present flood risk as a statistical indicator based on rainfall data, not as a reliable flood prediction system. Actual flooding also depends on drainage, terrain, river levels, soil saturation, and other factors.
+
+## Recommended implementation scope
+
+Keep the first version limited to five core features above. Use a historical rainfall CSV dataset, a simple and user-friendly dashboard, and charts that update based on the uploaded data. Avoid advanced machine learning, live weather integrations, and complex flood simulations.
+
+The next step is to create a complete project-generation prompt that specifies the user interface, statistical calculations, dataset format, validation rules, dashboard, and expected outputs so the application can be implemented without unnecessary features.

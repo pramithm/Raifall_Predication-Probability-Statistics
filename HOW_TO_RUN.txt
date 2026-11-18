@@ -1,0 +1,40 @@
+========================================================================
+RAINRISK — RAINFALL PROBABILITY & FLOOD RISK ANALYSIS CAPSTONE
+QUICK START GUIDE (PACKAGES ALREADY INSTALLED)
+========================================================================
+
+Since dependencies are already installed, open TWO separate terminal windows:
+
+------------------------------------------------------------------------
+TERMINAL 1: START THE BACKEND (FastAPI)
+------------------------------------------------------------------------
+Option A (Command):
+  cd backend
+  python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+
+Option B (Double-click or run batch script):
+  run_backend.bat
+
+-> Backend API will be active at: http://127.0.0.1:8000
+-> API Documentation (Swagger):  http://127.0.0.1:8000/docs
+
+
+------------------------------------------------------------------------
+TERMINAL 2: START THE FRONTEND (React + Vite)
+------------------------------------------------------------------------
+Option A (Command):
+  cd frontend
+  npm run dev
+
+Option B (Double-click or run batch script):
+  run_frontend.bat
+
+-> Web Dashboard will open at: http://localhost:5173
+
+
+------------------------------------------------------------------------
+RUNNING BACKEND UNIT TESTS (OPTIONAL)
+------------------------------------------------------------------------
+  cd backend
+  python -m pytest
+========================================================================
