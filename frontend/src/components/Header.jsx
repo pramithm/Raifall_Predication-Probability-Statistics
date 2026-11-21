@@ -123,7 +123,7 @@ export default function Header({
             <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-900/80 text-slate-300 text-xs font-semibold border border-slate-800">
               <Calendar className="h-3.5 w-3.5 text-slate-400" />
               <span>
-                {metadata ? `${metadata.start_date.slice(0, 4)}–${metadata.end_date.slice(0, 4)}` : '2004–2023'}
+                {metadata ? `${metadata.start_date.slice(0, 4)}–${metadata.end_date.slice(0, 4)}` : '2012-2025'}
               </span>
             </div>
 

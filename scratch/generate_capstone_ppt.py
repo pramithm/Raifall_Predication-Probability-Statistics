@@ -456,7 +456,7 @@ def create_presentation():
             "  3. Negative Rainfall: Excludes physically impossible negative values.",
             "",
             "• Result:",
-            "  Yields 7,305 clean, continuous daily records (2004–2023)."
+            "  Yields 7,305 clean, continuous daily records (2012-2025)."
         ],
         title_color=CYAN_ACCENT
     )
@@ -656,7 +656,7 @@ def create_presentation():
             "",
             "5. SIMATS Engineering (2026). Course UBA0618 – Applied Mathematics / Probability and Statistics Capstone Specification & Guidelines.",
             "",
-            "6. Project Codebase & Dataset: Verified 7,305 daily observations (2004–2023) and full-stack FastAPI/React RainRisk prototype."
+            "6. Project Codebase & Dataset: Verified 7,305 daily observations (2012-2025) and full-stack FastAPI/React RainRisk prototype."
         ],
         title_color=CYAN_ACCENT
     )

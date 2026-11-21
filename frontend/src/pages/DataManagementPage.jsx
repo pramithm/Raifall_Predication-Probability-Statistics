@@ -340,7 +340,7 @@ export default function DataManagementPage({ metadata, onDatasetUpdated }) {
               Restore 20-Year Chennai Dataset
             </h3>
             <p className="text-xs text-slate-400">
-              Reloads historical 7,305 daily records for Chennai (2004–2023)
+              Reloads historical 7,305 daily records for Chennai (2012-2025)
             </p>
           </div>
 

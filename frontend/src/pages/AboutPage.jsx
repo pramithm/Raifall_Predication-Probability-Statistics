@@ -49,7 +49,7 @@ export default function AboutPage() {
             Default Region: Chennai, India
           </h3>
           <p className="text-xs text-slate-400 leading-relaxed">
-            Analyzes 20 years of daily rainfall data for Chennai, Tamil Nadu (2004–2023). Highlights major storms like the 2015 floods (345 mm in one day) and 2023 Cyclone Michaung (255 mm in one day).
+            Analyzes 20 years of daily rainfall data for Chennai, Tamil Nadu (2012-2025). Highlights major storms like the 2015 floods (345 mm in one day) and 2023 Cyclone Michaung (255 mm in one day).
           </p>
         </div>
       </div>

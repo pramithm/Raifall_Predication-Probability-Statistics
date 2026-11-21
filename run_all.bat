@@ -5,10 +5,10 @@ echo ===================================================
 echo.
 
 echo Launching FastAPI Backend (Port 8000)...
-start "RainRisk Backend" cmd /k "cd backend && python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000"
+start "RainRisk Backend" /D "%~dp0backend" cmd /k "python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000"
 
 echo Launching Vite React Frontend (Port 5173)...
-start "RainRisk Frontend" cmd /k "cd frontend && npm run dev"
+start "RainRisk Frontend" /D "%~dp0frontend" cmd /k "npm run dev"
 
 echo.
 echo Both services are now running!

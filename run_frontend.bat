@@ -1,4 +1,4 @@
 @echo off
 echo Starting RainRisk Vite React Frontend...
-cd frontend
+cd /d "%~dp0frontend"
 npm run dev
